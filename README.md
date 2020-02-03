@@ -1,17 +1,19 @@
 # PROJET ELTDM - README
 
-Ce dossier contient les notebooks, scripts et jeux de données nécessaires à la réplication des expériences. 
-
 
 ## Introduction
 
-L'objectif de ce projet a été de paralléliser un algorithme de Gibbs permettant de clusteriser des observations en supposant que ces dernières suivent un modèle DP-GMM. Nous avons procédé comme suit : après avoir écrit un algorithme permettant de clusteriser les données, nous l'avons réécrit une première fois en fonctionnalisant ses composantes cruciales en termes de performance, puis nous avons réécrit ces fonctions en C puis parallilisé l'exécution de ces dernières. 
+L'objectif de ce projet a été de paralléliser un algorithme de Gibbs permettant de clusteriser des observations en supposant que ces dernières suivent un modèle DP-GMM. Nous avons procédé comme suit : après avoir écrit un algorithme permettant de clusteriser les données, nous l'avons réécrit une première fois en fonctionnalisant ses composantes cruciales en termes de performance, puis nous avons réécrit ces fonctions en C puis parallélisé l'exécution de ces dernières. 
 
 Les différents notebooks présentent en détail le fonctionnement de l'algorithme ainsi que les grandes étapes de notre démarche.  Au terme de cette dernière, nous sommes parvenus à améliorer les performances d'un facteur 10 (voir notebook 5 ou section "Performance" ci-après).
 
+Afin de faciliter la réplication, nous utilisons des données générées à partir de fonctions dont les scripts, en plus de ceux implémentant l'algorithme et son optimisation, sont disponibles dans le présent répertoire. 
+
 ## Présentation de l'algorithme
 
-La figure ci-dessous résume l'idée principale de l'algorithme : nous avons des observations réparties selon $K$ cluster où $K$ est inconnu (l'approche bayésienne non paramétrique diffère en cela des approches usuelles telles que les k-means en ce qu'elle ne nécessite pas de spécifier un nombre de clusters au préalable). L'implémentation se fait en utilisant un algorithme de Gibbs, présenté ci-dessous. 
+L'idée de l'algorithme est de clusteriser des données, sans pour autant connaitre <i> a priori </i> le nombre de clusters dans lesquels ces observations sont réparties. Ainsi, itérativement, l'algorithme va calculer la probabilité pour chaque observation d'appartenir à un cluster déjà existant ou bien à un nouveau cluster. En répétant ce processus pour chaque observations un certain nombre de fois, l'algorithme finit par se stabiliser autour d'un nombre de clusters fixé. 
+
+La différence de l'approche bayésienne que nous implémentons ici (DP-GMM) est qu'il n'est pas nécessaire de connaitre à l'avance le nombre de clusters (contrairement à d'autres approches plus traditionnelles comme les k-means par exemple). Il faut seulement spécifier des hyperparamètres, en particulier un coefficient $\alpha > 0$. Plus ce coefficient est grand, plus l'algorithme aura tendance  créer de nouveaux clusters. La procédure exacte est présentée ci-après :
 
 ![alt text](https://github.com/hugothimonier/DPMM_optimization/blob/master/figures/algorithm.png)
 
