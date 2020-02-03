@@ -1,6 +1,6 @@
 # PROJET ELTDM - README
 
-Ce dossier contient les notebooks, scripts et jeux de données nécessaires à la réplication des expériences.
+Ce dossier contient les notebooks, scripts et jeux de données nécessaires à la réplication des expériences. L'objectif de ce projet a été de paralléliser un algorithme de Gibbs permettant de clusteriser des observations en supposant que ces dernières suivent un modèle DP-GMM. Nous avons procédé comme suit : après avoir écrit un algorithme permettant de clusteriser les données, nous l'avons réécrit une première fois en fonctionnalisant ses composantes cruciales en termes de performance, puis nous avons réécrit ces fonctions en C puis parallilisé l'exécution de ces dernières. 
 
 ## Contenu des dossiers
 
