@@ -16,6 +16,8 @@ Le dossier ```lib``` contient les fonctions nécéssaires à l'exécution de l'a
 
 Le dossier ```notebooks```contient les cinq notebooks qui mettent en place notre approche. 
 
+Le dossier ```Rapport```contient le rapport de notre projet sous format PDF. 
+
 ## Contenu des notebooks
 
 Les cinq notebooks décrivent l'implémentation de notre approche. 
