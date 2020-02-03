@@ -13,7 +13,7 @@ Les différents notebooks présentent en détail le fonctionnement de l'algorith
 
 La figure ci-dessous résume l'idée principale de l'algorithme : nous avons des observations réparties selon $K$ cluster où $K$ est inconnu (l'approche bayésienne non paramétrique diffère en cela des approches usuelles telles que les k-means en ce qu'elle ne nécessite pas de spécifier un nombre de clusters au préalable). L'implémentation se fait en utilisant un algorithme de Gibbs, présenté ci-dessous. 
 
-![alt text](https://github.com/hugothimonier/parallelization_sort/blob/master/rendu_final/figures/iterations_comparison.png)
+![alt text](https://github.com/hugothimonier/parallelization_sort/blob/master/rendu_final/figures/algorithm.png)
 
 
 ## Contenu des dossiers
