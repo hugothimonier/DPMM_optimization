@@ -13,7 +13,7 @@ Afin de faciliter la réplication, nous utilisons des données générées à pa
 
 L'idée de l'algorithme est de clusteriser des données, sans pour autant connaitre <i> a priori </i> le nombre de clusters dans lesquels ces observations sont réparties. Ainsi, itérativement, l'algorithme va calculer la probabilité pour chaque observation d'appartenir à un cluster déjà existant ou bien à un nouveau cluster. En répétant ce processus pour chaque observations un certain nombre de fois, l'algorithme finit par se stabiliser autour d'un nombre de clusters fixé. 
 
-La différence de l'approche bayésienne que nous implémentons ici (DP-GMM) est qu'il n'est pas nécessaire de connaitre à l'avance le nombre de clusters (contrairement à d'autres approches plus traditionnelles comme les k-means par exemple). Il faut seulement spécifier des hyperparamètres, en particulier un coefficient $\alpha > 0$. Plus ce coefficient est grand, plus l'algorithme aura tendance  créer de nouveaux clusters. La procédure exacte est présentée ci-après :
+La différence de l'approche bayésienne que nous implémentons ici (DP-GMM) est qu'il n'est pas nécessaire de connaitre à l'avance le nombre de clusters (contrairement à d'autres approches plus traditionnelles comme les k-means par exemple). Il faut seulement spécifier des hyperparamètres, en particulier un coefficient $$\alpha > 0$$. Plus ce coefficient est grand, plus l'algorithme aura tendance  créer de nouveaux clusters. La procédure exacte est présentée ci-après :
 
 ![alt text](https://github.com/hugothimonier/DPMM_optimization/blob/master/figures/algorithm.png)
 
