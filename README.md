@@ -58,7 +58,7 @@ Le code ```.pyx```a été compilé sur MacOS 10.13.6. Il peut être nécessaire 
 
 ## Performance
 
-La cythonisation et la parallélisation ont permis un gain non négligeable en terme de durée d'execution comme en témoigne les graphiques suivants. On remarque un gain d'un facteur 10 entre la version non optimisée et la version parallélisée de l'algorithme, que l'on s'intéresse à la performance en fonction du nombre d'itérations (voir ci-dessous) ou du nombre d'observations (voir ci-après).
+La cythonisation et la parallélisation ont permis un gain non négligeable en terme de durée d'execution comme en témoignent les graphiques suivants. On remarque un gain d'un facteur 10 entre la version non optimisée et la version parallélisée de l'algorithme, que l'on s'intéresse à la performance en fonction du nombre d'itérations (voir ci-dessous) ou du nombre d'observations (voir ci-après).
 
 ![alt text](https://github.com/hugothimonier/DPMM_optimization/blob/master/figures/iterations_comparison.png)
 
