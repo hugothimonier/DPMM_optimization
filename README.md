@@ -16,7 +16,7 @@ Le dossier ```lib``` contient les fonctions nécéssaires à l'exécution de l'a
 
 Le dossier ```notebooks```contient les cinq notebooks qui mettent en place notre approche. 
 
-Le dossier ```Rapport```contient le rapport de notre projet sous format PDF. 
+Le dossier ```rapport```contient le rapport de notre projet sous format PDF ainsi qu'un sous dossier ```markdown``` contenant les notebooks au format ```.md``` si jamais les notebooks venaient à ne pas s'exécuter.
 
 ## Contenu des notebooks
 
